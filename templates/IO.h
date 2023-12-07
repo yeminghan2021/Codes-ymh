@@ -1,6 +1,5 @@
-#ifndef _GLIBCXX_IOSTREAM
-#include<bits/stdc++.h>
-using namespace std;
+#ifndef YMH_HEADS
+#include "heads.h"
 #endif
 
 namespace IO//超级读写

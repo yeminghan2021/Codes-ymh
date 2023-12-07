@@ -7,17 +7,9 @@ using namespace std;
 /*----------------ModInt----------------*/
 #define TmplT template<typename _T>
 TmplT
-_T gcd(_T a,_T b)
-{
-	if(a<b)swap(a,b);
-	return b?gcd(b,a%b):a;
-}
-TmplT
-_T lcm(_T a,_T b){return a*b/gcd(a,b);}
-TmplT
 _T pw(_T ds,ll zs)
 {
-	if(!zs)return 1;
+	if(!zs)return (_T)1;
 	_T t=pw(ds,zs>>1);t*=t;
 	if(zs&1)return t*ds;
 	return t;
@@ -72,7 +64,6 @@ ostream& operator<<(ostream &out,const ModInt<MOD,_T> A)
 typedef ModInt<998244353>      M998;
 typedef ModInt<1000000007>     M197;
 using MI=M998;
-//What the f**k that literals almost cannot be used with templates!!
 MI operator "" _M(unsigned ll V){return MI(V);}
 #undef T_MOD_TYP
 #undef TmplT
